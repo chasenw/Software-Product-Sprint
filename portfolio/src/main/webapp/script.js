@@ -28,3 +28,13 @@ function addRandomGreeting() {
 
   console.log(greeting)
 }
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showBestCity() {
+    const responseFromServer = await fetch('/city');
+    const textFromResponse = await responseFromServer.text();
+  
+    const citySpace = document.getElementById('cityContainer');
+    citySpace.innerText = textFromResponse;
+  }
+  
