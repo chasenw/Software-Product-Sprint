@@ -7,13 +7,67 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <div id="header">
+      
+      <img src="/Images/carBasketball.jpeg" />
+      <h1>Chase Nwamu Portfolio</h1>
+   
+      
     </div>
+    <div id = "interests">
+        <div class = "Tbox">
+            <div class = "title">
+                Computer Science
+            </div>
+            <div class = "Icontent">
+                Over the last year, I've become really interested in computer science. Although I did not come into college with the intention to major in it, 
+                I have really enjoyed all of the introductory courses I have taken it (theory, probablity, and data structures), and I am excited to continue my 
+                computer science career. Currently, I am familiar with python, C++, java, and I understand the concept of object oriented programming. I have also 
+                taken an introductory online course on html, css, and javascript in web development, although I am still improving my skills
+            </div>
+        </div>
+        <div class = "Tbox">
+            <div class = "title">
+                Sports
+            </div>
+            
+            <div class = "Icontent">
+            I love sports, and I can watch basketball, tennis, soccer or football all day. I've also played tennis and basketball
+            since I was young, and I still love to play both sports. I'm an avid fan of the Golden State Warriors and Philadelphia Eagles &#40doesn't make sense I know&#41, and I love
+            to attend games when I can.
+            </div>
+
+        </div>
+        <div class = "Tbox">
+            <div class = "title">
+                Tutoring
+            </div>
+
+            <div class = "Icontent">
+            Tutoring is something I'm passionate about and have done since high school. In 2019, I helped found an orginzation called
+            StemUp STL which provided free tutoring to low income middle and high schoolers in the St. Louis area. In college, I started
+            volunteering for a tutoring organization called EPATT
+            </div>
+
+        </div>
+
+    </div>
+   
+   
+   
+    <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+    <p>Click here to get a random basketball player:</p>
+    <button onclick="addRandomGreeting()">Click</button>
+    <div id="greeting-container"></div>
+    <div>space</div>
+    <div> more space</div>
+    <p>Click this button to see the world's best city according to the server.</p>
+    <button onclick="showBestCity();">
+      Show City
+    </button>
+    <p id="cityContainer"> here's some placeholder before</p>
+    <div>click <button onclick="showRandomMessage()">here</button> to see random message from server</div>
+    <div id = "messageContainer"></div>
+    
   </body>
 </html>
