@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['Steph Curry!', 'Lebron James', 'Jayson Tatum', 'Luka Doncic'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -25,4 +25,42 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+
+  console.log(greeting)
 }
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showBestCity() {
+    const responseFromServer = await fetch('/city');
+    const textFromResponse = await responseFromServer.text();
+  
+    const citySpace = document.getElementById('cityContainer');
+    citySpace.innerText = textFromResponse;
+  }
+
+  async function showRandomMessage() {
+    const responseFromServer = await fetch('/random');
+    const textFromResponse = await responseFromServer.json();
+
+    console.log(textFromResponse)
+
+    const rNum = Math.floor(Math.random() * 3) + 1
+
+    const mSpace = document.getElementById('messageContainer')
+
+    if (rNum == 1) {
+        mSpace.innerText = textFromResponse.m1
+    }
+    if (rNum == 2) {
+        mSpace.innerText = textFromResponse.m2
+    }
+    if (rNum == 3) {
+        mSpace.innerText = textFromResponse.m3
+    }
+  
+  //  const citySpace = document.getElementById('cityContainer');
+  //  citySpace.innerText = textFromResponse;
+  }
+
+
+  
